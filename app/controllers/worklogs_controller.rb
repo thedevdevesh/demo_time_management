@@ -1,8 +1,8 @@
 class WorklogsController < ApplicationController
-    before_action :set_work_log, only: [:edit, :update, :destory]
+    before_action :set_work_log, only: [ :edit, :update, :destory ]
 
     def index
-        @worklogs = Worklog.includes(:user).all
+        @worklogs = Worklog.includes(:user).order(date: :desc)
     end
 
     def new

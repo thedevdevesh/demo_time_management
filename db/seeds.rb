@@ -7,3 +7,8 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+User.create([
+    { name: 'Rakesh', preferred_working_hour_per_day: 7.5 },
+    { name: 'Umesh', preferred_working_hour_per_day: 7.5 }
+])
